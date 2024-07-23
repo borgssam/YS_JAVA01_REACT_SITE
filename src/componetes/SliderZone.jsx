@@ -50,9 +50,17 @@ export function SliderZone(){
                 <li className="slider_image"><img src={slider3} alt=""/></li>  */}
             </ul>
             <div className="control_panel">
-                <div className="control_btn active"  data-index="0"></div>
-                <div className="control_btn" data-index="1"></div>
-                <div className="control_btn" data-index="2"></div>
+              {
+                sliders.map((slider, index)=>{
+                  return(
+                    <div className={`control_btn ${currentIndex === index? 'active': ''}`}  onClick={()=>{setCurrentIndex(index);}}></div>
+                  );
+                })
+              }
+                {/* <div className={`control_btn ${currentIndex === 0? 'active': ''}`}  onClick={()=>{setCurrentIndex(0);}}></div>
+                <div className={`control_btn ${currentIndex === 1? 'active': ''}`}  onClick={()=>{setCurrentIndex(1);}}></div>
+                <div className={`control_btn ${currentIndex === 2? 'active': ''}`}  onClick={()=>{setCurrentIndex(2);}}></div>
+                 */}
             </div>
             <div className="direct_btn">
                 <div className="left_btn" onClick={()=>handleArrowClick(-1)}><img src={left_btnImg} alt=""/></div>
