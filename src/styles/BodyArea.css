@@ -1,0 +1,17 @@
+#bodyArea{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+#leftmenuZone{
+    float: left;
+    width: 20%;
+
+}
+#contentsZone{
+    float: right;
+    width: 75%;
+}
