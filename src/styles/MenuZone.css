@@ -1,0 +1,35 @@
+#menuZone{
+  position: relative;
+  background-color: #333;
+}
+.mainmenu{
+  display:flex;
+  background-color:#333;
+  width:700px;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainmenu>li{position:relative;}
+.mainmenu>li>a{
+  display: block;
+  color:white;        
+  padding: 15px 20px;            
+}
+.mainmenu>li:hover > a{background-color: #444;}
+.mainmenu>li:hover > .submenu{display:block;}
+.submenu{
+  display:none;
+  position: absolute;
+  top:100%;
+  left:0;
+  background-color: #444;
+  width: 200px;
+  z-index:10;
+}
+.submenu>li>a{
+  display: block;
+  color:white;
+  padding:10px;
+}
+.submenu>li:hover .submenu{display:block;}
+.submenu>li>a:hover {background-color: #555;}
