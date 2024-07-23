@@ -7,17 +7,28 @@ import slider2 from '../img/2.jpg';
 import slider3 from '../img/3.jpg';
 import "../styles/SliderZone.css"
 
-
 export function SliderZone(){
   const [currentIndex, setCurrentIndex] = useState(1);
   const sliders = [slider1, slider2, slider3];
   const handleArrowClick = (direction) =>{
     let _index = currentIndex + direction;
-    if(_index < 0){_index=0;} else if(_index>2){
-      _index = 2;
+    if(_index < 0){
+      _index=0;
+    } else if(_index>sliders.length-1){
+      _index = sliders.length-1;
     }
     setCurrentIndex(_index);
   }
+  useEffect(
+    ()=>{
+      const interval = setInterval(
+        ()=>{
+          setCurrentIndex((idx)=> (idx+1) % sliders.length);
+        }, 3000
+      );
+      return ()=>clearInterval(interval);
+    },[sliders.length]
+  );
   return (
 
     // <!-- 슬라이더Zone시작 -->
