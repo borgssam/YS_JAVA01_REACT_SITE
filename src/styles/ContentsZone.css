@@ -1,0 +1,12 @@
+  .contents_title{
+      font-size: 32px;
+      padding: 10px 30px;
+      border-bottom: 5px solid gray;
+  }
+  .album{
+      border-top:1px solid green;
+  }
+  .album td{
+      padding : 5px;
+      border-bottom: 1px solid green;
+  }
