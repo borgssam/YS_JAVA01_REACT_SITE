@@ -1,0 +1,13 @@
+#hotmenu{
+    width: 100%;
+    background-color: #f5f5f5;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+#hotmenu>ul{
+    width:450px; margin: 0 auto;overflow: hidden;
+}
+#hotmenu li{
+    float: left;
+    padding: 1px 6px;
+}
